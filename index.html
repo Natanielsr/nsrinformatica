@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NSR Informática</title>
+
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script type="module" src="./js/googleMaps.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="./css/googleMaps-style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="./css/responsive.css"
+      media="screen and (max-width: 768px)"
+    />
+    <link rel="stylesheet" href="./css/print.css" media="print">
+
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="divlogo"><img id="nsrlogoheader"
+          src="./images/LOGONSR.png"
+          alt="Logotipo da empresa de Informática NSR"
+        /> <label>Informática</label></div>
+        <div class="menu-section">
+          <div class="menu-toggle">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+          </div>
+          <nav>
+            <ul>
+              <li>
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a id="btnContact">Contato</a>
+              </li>
+              <li>
+                <a href="#">Quem nós Somos</a>
+              </li>
+              <li>
+                <a href="#btnRepair">Serviços</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero" id="about">
+      <div class="container">
+        <div>
+          <h2>
+            Conserto de Computador Notebook e Desktop.
+          </h2>
+          <p>
+            Empresa especializada em Montagem e Manutenção de Computadores Notebook e Desktop, realizamos Serviços de Reparo, Formatação,
+             Limpeza, troca de Componentes, Recuperação de Arquivos e afins
+          </p>
+          <a id="btnRepair"  class="button">Quero Consertar!</a>
+        </div>
+        <img
+          src="./images/manutence.png"
+          alt="Manutenção"
+        />
+      </div>
+    </section>
+
+    <main>
+      <section id="servicesCards" class="cards">
+        <div class="card">
+          <!--
+          <picture class="image" alt="Imagem">
+            <source media="(min-width: 768px)" srcset="https://i.ytimg.com/vi/GykTLqODQuU/maxresdefault.jpg">
+            <source media="(min-width: 320px)" srcset="https://i.ytimg.com/vi/rAzHvYnQ8DY/hqdefault.jpg">
+            <source media="(min-width: 10px)" srcset="https://i.ytimg.com/vi/HN1UjzRSdBk/mqdefault.jpg">
+
+            <img src="https://i.ytimg.com/vi/GykTLqODQuU/hqdefault.jpg" alt="Imagem" />
+            </picture>
+
+          -->
+          <div class="image">
+            <img src="https://i.ytimg.com/vi/GykTLqODQuU/hqdefault.jpg" />
+          </div>
+          <div class="content">
+            <p class="title text--medium">
+              Formulário Animado com JS puro e CSS Animation | Mayk Brito
+            </p>
+            <div class="info">
+              <p class="text--medium">57 Min</p>
+              <p class="price text--medium">⭐⭐⭐⭐⭐</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section id="form">
+      <form method="post" action="email.php">
+        <h3>Entre em contato Conosco!</h3>
+        <div class="form-group">
+          <input class="input-control" name="name" placeholder="Seu Nome" />
+
+          <input type="number" class="input-control" name="phone" placeholder=" Seu Telefone" />
+        </div>
+
+        <div class="form-group">
+          <input name="email" type="email" class="input-control" placeholder="Seu Email" />
+        </div>
+
+        <div class="form-group">
+          <input class="input-control" placeholder="Qual o Seu Problema?" />
+        </div>
+
+        <div class="form-group">
+          <input class="input-control" placeholder="Cidade" style="flex: 3 1" />
+          <input class="input-control" placeholder="Estado" style="flex: 1" />
+          <input class="input-control" placeholder="CEP" style="flex: 1" />
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="button">Enviar</button>
+
+        </div>
+
+      </form>
+    </section>
+
+    <section>
+      <!--The div element for the map -->
+      <div id="map"></div>
+
+      <!-- 
+      The `defer` attribute causes the callback to execute after the full HTML
+      document has been parsed. For non-blocking uses, avoiding race conditions,
+      and consistent behavior across browsers, consider loading using Promises
+      with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+      -->
+      <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOj1FIY6clCIWNLrHijxYIay_RMRES7dI&callback=initMap&v=weekly"
+        defer
+      ></script>
+    </section>
+
+    <footer>
+
+      <section>
+        <h3>Atendimento</h3>
+        <div>Horário de Atendimento</div>
+        <div>09:00 às 18:00</div>
+        <div>Segunda a Sexta</div>
+        <div>09:00 às 13:00 nos Sábados</div>
+        <div>Horário de Brasília </div>
+        <div>(Exceto domingo e feriados, em Angatuba - SP)</div>
+      </section>
+
+
+
+      <section>
+          <h3>Endereço</h3>
+          <div><label>Cidade:</label> Angatuba - SP</div>
+          <div><label>Bairro:</label> Vila Ribeiro</div>
+          <div><label>Rua:</label> Rua Adão Ribeiro 304</div>
+          <div><label>CEP:</label> 18240-000</div>
+      </section>
+
+      <section>
+          <h3>Redes Sociais</h3>
+          <div><label>Instagram:</label> @nsrinformatica</div>
+          <div><label>Facebook:</label> @nsrinfo</div>
+      </section>
+
+        <section>
+          <h3>Contato</h3>
+          <div><label>Email:</label> contatonatanielsoares@gmail.com</div>
+          <div><label>Telefone:</label> (15)997307629</div>
+          <div>NSR Informática</div>
+          <div><label>CNPJ:</label> 44.719.365/0001-46</div>
+        </section>
+
+    </footer>
+
+
+    
+    <div class="modal-overlay">
+      <div class="modal">
+
+        <a class="close-modal">
+          <svg viewBox="0 0 20 20">
+            <path
+              fill="#000000"
+              d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"
+            ></path>
+          </svg>
+        </a>
+        <div class="modal-content">
+          <div class="video-background">
+            <div class="video-foreground">
+              <iframe
+                src="https://www.youtube.com/embed/GykTLqODQuU"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/scripts.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/pageRoller.js"></script>
+  </body>
+</html>
